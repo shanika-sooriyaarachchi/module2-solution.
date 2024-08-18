@@ -1,0 +1,116 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased spacing between sections */
+}
+
+.section {
+    position: relative;
+    border: 1px solid black;
+    padding: 30px;
+    color: #fff;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+/* Section-specific colors */
+#section1 {
+    background-color: #FF7F50; /* Coral */
+}
+
+#section2 {
+    background-color: #3CB371; /* Medium Sea Green */
+}
+
+#section3 {
+    background-color: #20B2AA; /* Light Sea Green */
+}
+
+/* Hover effects */
+#section1:hover {
+    background-color: #FF6347; /* Tomato */
+}
+
+#section2:hover {
+    background-color: #2E8B57; /* Sea Green */
+}
+
+#section3:hover {
+    background-color: #2F4F4F; /* Dark Slate Gray */
+}
+
+/* Title-specific colors */
+#section1 .title {
+    background-color: #DC143C; /* Crimson */
+}
+
+#section2 .title {
+    background-color: #006400; /* Dark Green */
+}
+
+#section3 .title {
+    background-color: #008B8B; /* Dark Cyan */
+}
+
+.title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px; /* Rounded corners for the title */
+    font-size: 1.2em;
+}
+
+/* Desktop view (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        flex: 1;
+        min-width: calc(33.333% - 20px); /* 3 sections equally spaced */
+    }
+}
+
+/* Tablet view (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        flex: 1;
+        min-width: calc(50% - 20px); /* 2 sections in first row, 1 section in second row */
+    }
+
+    #section3 {
+        width: 100%; /* Full width in second row */
+    }
+}
+
+/* Mobile view (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Full width for each section */
+    }
+}
